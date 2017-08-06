@@ -8,7 +8,7 @@
 
 使用list + zset 实现相对可靠的队列.
 
-注: Redis持久化机制采用异步写入, 故而无法保证数据安全. 又因RedisModule_Call多命令下无法保证原子性，也无法保证安全.
+`注: Redis持久化机制采用异步写入, 故而无法保证数据安全. 又因RedisModule_Call多命令下无法保证原子性，也无法保证安全.`
 
 ## install
 
