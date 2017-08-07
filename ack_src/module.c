@@ -3,6 +3,11 @@
 #include "../rmutil/strings.h"
 #include "../rmutil/test_util.h"
 
+int AckSureCommand(RedisModuleCtx *ctx, RedisModuleString **argv, int argc) {
+}
+
+int AckLpopCommand(RedisModuleCtx *ctx, RedisModuleString **argv, int argc) {
+}
 /*
 * example.AckPush <key> <score> <value> <ack queue name>
 */
@@ -52,6 +57,8 @@ int RedisModule_OnLoad(RedisModuleCtx *ctx) {
 
   // register example.hgetset - using the shortened utility registration macro
   RMUtil_RegisterWriteCmd(ctx, "ack.rpush", AckRpushCommand);
+  RMUtil_RegisterWriteCmd(ctx, "ack.lpop", AckLpopCommand);
+  RMUtil_RegisterWriteCmd(ctx, "ack.sure", AckSureCommand);
 
   return REDISMODULE_OK;
 }
