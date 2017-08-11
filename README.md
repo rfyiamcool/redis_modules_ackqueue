@@ -1,8 +1,13 @@
 # redis_modules_ackqueue
 *only support redis4.0, because redis4.x support load custom module*
 
+### 执行序:
+
+push queue --> get queue --> zadd queue -->  pop queue --> ack --> zrem in queue
+
 ### TO DO:
 * when pop, do something
+* when ack, do something
 
 ## why
 
